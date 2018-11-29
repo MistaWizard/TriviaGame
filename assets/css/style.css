@@ -1,0 +1,21 @@
+.header {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+img {
+    max-height: 250px;
+    max-width: auto;
+}
+
+.numbersSection {
+    margin-top: 20px;
+    margin: auto;
+    width: 30%;
+    padding: 40px;
+    font-size: 25px;
+    border: 2px solid orange;
+    border-radius: 5px;
+}

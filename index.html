@@ -10,18 +10,19 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-    <header>Pokemon Trivia</header>
+    <div class="header">Pokemon Trivia</div>
 
     <div class="numbersSection">
-        <div id="Number">
         <p>Time Remaining: <span id="pokeTime"></span></p>
         <p>Correct Answers: <span id="pokeWins"></span></p>
         <p>Incorrect Answers: <span id="pokeLosses"></span></p>
-        </div>
     </div>
 
-    <div class="questionSection">
-        
+    <div class="gameArea">
+        <div id="questionSection"></div>
+        <div id="answerblock"></div>
+        <button class ="btn btn-success" id ="start">Start Game</button><br>
+        <button class="btn btn-success" id="reset">Play Again?</button>
     </div>
     
         <!-- jQuery -->
