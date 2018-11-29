@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <title>Gotta Answer 'Em All!</title>
-        <!-- Reset CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-        <!-- My CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    </head>
-    <body>
-    
+<head>
+    <title>Gotta Answer 'Em All!</title>
+    <!-- Reset CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    <header>Pokemon Trivia</header>
+
+    <div class="numbersSection">
+        <div id="Number">
+        <p>Time Remaining: <span id="pokeTime"></span></p>
+        <p>Correct Answers: <span id="pokeWins"></span></p>
+        <p>Incorrect Answers: <span id="pokeLosses"></span></p>
+        </div>
+    </div>
     
         <!-- jQuery -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -16,5 +26,5 @@
         <!-- Script -->
         <script type="text/javascript" src="./assets/javascript/app.js"></script>
 
-    </body>
+</body>
 </html>
