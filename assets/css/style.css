@@ -1,3 +1,7 @@
+body {
+    background-image: url("./assets/images/pokemon-high-resolution-background-Is-4K-Wallpaper.jpg");
+}
+
 .header {
     text-align: center;
     font-size: 50px;
@@ -6,16 +10,28 @@
 }
 
 img {
-    max-height: 250px;
+    max-height: 200px;
     max-width: auto;
 }
 
 .numbersSection {
     margin-top: 20px;
     margin: auto;
-    width: 30%;
+    width: 25%;
+    padding: 20px;
+    font-size: 20px;
+    border: 2px solid orange;
+    border-radius: 5px;
+}
+
+.gameArea {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
     padding: 40px;
     font-size: 25px;
+    text-align: center;
     border: 2px solid orange;
     border-radius: 5px;
 }
