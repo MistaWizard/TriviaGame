@@ -33,9 +33,11 @@ $(document).ready(function() {
     var newArray = [];
     var holder = [];
 
-
+    // Hide the reset button on first load
     $("#reset").hide();
-    //click start button to start game
+
+
+    // Click start button to start game
     $("#start").on("click", function () {
             $("#start").hide();
             $("#pokeWins").text(pokeWins);
@@ -49,19 +51,19 @@ $(document).ready(function() {
     }
     })
 
-    //timer start
+    // Timer start function
     function runTimer(){
 	    if (!running) {
 	    intervalId = setInterval(decrement, 1000); 
 	    running = true;
 	    }
     }
-    //timer countdown
+    // Timer countdown function
     function decrement() {
 	    $("#pokeTime").text(timer);
 	    timer --;
 
-	//stop timer if reach 0
+	// Stop timer if the count reaches 0
 	    if (timer === 0) {
 	    	unanswerCount++;
 		    stop();
@@ -70,36 +72,34 @@ $(document).ready(function() {
 	    }	
     }
 
-    //timer stop
+    // Timer stop function
     function stop() {
     	running = false;
 	    clearInterval(intervalId);
     }
 
-    //randomly pick question in array if not already shown
-    //display question and loop though and display possible answers
+    // Randomly pick our question to ask the user
     function displayQuestion() {
-	    //generate random index in array
 	    index = Math.floor(Math.random()*options.length);
 	    pick = options[index];
 
-	    //iterate through answer array and display
+	    // Iterate through answer array and display
 	    $("#questionSection").html("<h2>" + pick.question + "</h2>");
 	    for (var i = 0; i < pick.choice.length; i++) {
 	    	var userChoice = $("<div>");
 	    	userChoice.addClass("answerchoice");
 		    userChoice.html(pick.choice[i]);
-		    //assign array position to it so can check answer
+		    // Assign array position to it so can check for the correct answer
 		    userChoice.attr("data-guessvalue", i);
 		    $("#answerblock").append(userChoice);
         }
 
-        //click function to select answer and outcomes
+        // Click function to select answer and determine if that answer is correct
         $(".answerchoice").on("click", function () {
-	        //grab array position from pokeGuess
+	        // Grab array position from pokeGuess
 	        pokeGuess = parseInt($(this).attr("data-guessvalue"));
 
-	        //correct guess or wrong guess outcomes
+	        // Determine if the answer is wrong or right
 	        if (pokeGuess === pick.answer) {
 		        stop();
 		        pokeWins++;
@@ -119,17 +119,18 @@ $(document).ready(function() {
         })
     }
 
-
+    // Hide the picture associated with the correct answer
     function hidepicture () {
 	    $("#answerblock").append("<img src=" + pick.photo + ">");
 	    newArray.push(pick);
     	options.splice(index,1);
 
+        // Hide picture timeout
     	var hidpic = setTimeout(function() {
 	    	$("#answerblock").empty();
 	    	timer= 10;
 
-	        //run the score screen if all questions answered
+	        // Run the end of game if all the questions are answered
 	        if ((pokeLosses + pokeWins + unanswerCount) === qCount) {
 	    	    $("#questionSection").empty();
 		        $("#reset").show();
@@ -144,6 +145,7 @@ $(document).ready(function() {
 	    }, 3000);
     }
 
+    // Click the reset button to restart the game
     $("#reset").on("click", function() {
         $("#reset").hide();
 	    $("#answerblock").empty();
