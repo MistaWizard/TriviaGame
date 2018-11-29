@@ -11,7 +11,14 @@ $(document).ready(function() {
             choice: ["Mewtwo", "Rayquaza", "Regigigas", "Lugia"],
             answer: 3,
             photo: "assets/images/600px-249Lugia.png"
-    }];
+        },
+        {
+            question: "Does the anime character Ash appear in the main series games as the protagonist?",
+            choice: ["Yes", "No"],
+            answer: 1,
+            photo: "assets/images/Ash_SM.png"
+        }
+    ];
 
     var pokeWins = 0;
     var pokeLosses = 0;
@@ -151,5 +158,5 @@ $(document).ready(function() {
 	    displayQuestion();
 	    runTimer();
     })
-    
+
 })
