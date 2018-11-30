@@ -31,7 +31,7 @@ $(document).ready(function() {
             photo: "assets/images/Crystal_EN_boxart.png"
         },
         {
-            question: "Which Pokemon almost became the mascot of the series before Pikachu?"
+            question: "Which Pokemon almost became the mascot of the series before Pikachu?",
             choice: ["Clefairy", "Snorlax", "Mew", "Eevee"],
             answer: 0,
             photo: "assets/images/035Clefairy.png"
@@ -53,8 +53,6 @@ $(document).ready(function() {
 
     // Hide the reset button on first load
     $("#reset").hide();
-
-
     // Click start button to start game
     $("#start").on("click", function () {
             $("#start").hide();
@@ -65,8 +63,8 @@ $(document).ready(function() {
             displayQuestion();
             runTimer();
             for(var i = 0; i < options.length; i++) {
-        holder.push(options[i]);
-    }
+                holder.push(options[i]);
+            }
     })
 
     // Timer start function
