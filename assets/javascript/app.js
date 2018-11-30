@@ -29,6 +29,12 @@ $(document).ready(function() {
             choice: ["FireRed", "Diamond", "Moon", "Crystal"],
             answer: 3,
             photo: "assets/images/Crystal_EN_boxart.png"
+        },
+        {
+            question: "Which Pokemon almost became the mascot of the series before Pikachu?"
+            choice: ["Clefairy", "Snorlax", "Mew", "Eevee"],
+            answer: 0,
+            photo: "assets/images/035Clefairy.png"
         }
     ];
 
