@@ -17,6 +17,12 @@ $(document).ready(function() {
             choice: ["Yes", "No"],
             answer: 1,
             photo: "assets/images/Ash_SM.png"
+        },
+        {
+            question: "Which Pokemon was created and designed first?",
+            choice: ["Pikachu", "Arceus", "Rhydon", "Mew"],
+            answer: 2,
+            photo: "assets/images/112Rhydon.png"
         }
     ];
 
