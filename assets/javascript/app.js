@@ -23,6 +23,12 @@ $(document).ready(function() {
             choice: ["Pikachu", "Arceus", "Rhydon", "Mew"],
             answer: 2,
             photo: "assets/images/112Rhydon.png"
+        },
+        {
+            question: "Which Pokemon game had connectivity with cell phones in Japan?",
+            choice: ["FireRed", "Diamond", "Moon", "Crystal"],
+            answer: 3,
+            photo: "assets/images/Crystal_EN_boxart.png"
         }
     ];
 
